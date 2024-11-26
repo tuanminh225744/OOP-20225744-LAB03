@@ -1,3 +1,6 @@
+package hust.soict.dsai.aims.cart.Cart;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
+
 public class Cart {
     private DigitalVideoDisc[] itemsOrdered = new DigitalVideoDisc[20];
     private int qtyOrdered = 0;
