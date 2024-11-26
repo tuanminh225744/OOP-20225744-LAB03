@@ -67,5 +67,8 @@ public class DigitalVideoDisc {
 		this.id = nbDigitalVideoDiscs;
 	}
 	
-	
+	public boolean isMatch(String title) {
+	    return this.title.equalsIgnoreCase(title);
+	}
+
 }

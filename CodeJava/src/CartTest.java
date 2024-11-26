@@ -16,6 +16,6 @@ public class CartTest {
         
         cart.print();
 
-        
+        cart.searchByTitle("Aladin");
     }
 }

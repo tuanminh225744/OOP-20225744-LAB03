@@ -89,6 +89,19 @@ public class Cart {
         System.out.println("***************************************************");
     }
     
-    
+    public void searchByTitle(String title) {
+        boolean found = false;
+        for (int i = 0; i < qtyOrdered; i++) {
+            DigitalVideoDisc dvd = itemsOrdered[i];
+            if (dvd.isMatch(title)) {  
+                System.out.println("Found DVD with title \"" + title + "\": " + dvd.getTitle());
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("No DVD found with title \"" + title + "\"");
+        }
+    }
+
     
 }
