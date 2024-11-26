@@ -70,11 +70,25 @@ public class Cart {
     }
 	*/
     
-    
-    
     public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
         addDigitalVideoDisc(dvd1);
         addDigitalVideoDisc(dvd2);
     }
+    
+    public void print() {
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        float totalCost = 0;
+        for (int i = 0; i < qtyOrdered; i++) {
+            DigitalVideoDisc dvd = itemsOrdered[i];
+            System.out.println((i + 1) + ". DVD - " + dvd.getTitle() + " - " + dvd.getCategory() + " - " 
+                + dvd.getDirector() + " - " + dvd.getLength() + ": " + dvd.getCost() + " $");
+            totalCost += dvd.getCost();
+        }
+        System.out.println("Total cost: " + totalCost);
+        System.out.println("***************************************************");
+    }
+    
+    
     
 }
