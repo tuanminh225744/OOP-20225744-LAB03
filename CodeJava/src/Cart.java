@@ -38,4 +38,43 @@ public class Cart {
         }
         return total;
     }
+    
+    /*phuong thuc voi dau vao la mang*/
+    
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+        for (DigitalVideoDisc disc : dvdList) {
+            if (qtyOrdered < 20) {
+                itemsOrdered[qtyOrdered] = disc;
+                qtyOrdered++;
+                System.out.println("The disc " + disc.getTitle() + " has been added.");
+            } else {
+                System.out.println("The cart is full.");
+                break;
+            }
+        }
+    }
+    
+    /*phuong thuc voi dau vao la tham so tuy y
+    
+    public void addDigitalVideoDisc(DigitalVideoDisc... dvds) {
+        for (DigitalVideoDisc disc : dvds) {
+            if (qtyOrdered < 20) {
+                itemsOrdered[qtyOrdered] = disc;
+                qtyOrdered++;
+                System.out.println("The disc " + disc.getTitle() + " has been added.");
+            } else {
+                System.out.println("The cart is full. Could not add " + disc.getTitle());
+                break;
+            }
+        }
+    }
+	*/
+    
+    
+    
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+        addDigitalVideoDisc(dvd1);
+        addDigitalVideoDisc(dvd2);
+    }
+    
 }
